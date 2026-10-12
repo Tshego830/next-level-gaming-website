@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- STEP 1: Define Character Encoding & Viewport -->
+  <meta charset="utf-8" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+
+  <!-- STEP 2: Set Page Title -->
+  <title>Quotation &amp; Discount Calculator | Next Level Gaming</title>
+
+  <!-- STEP 3: Meta Tags for SEO & Social Sharing -->
+  <meta content="Build your gaming quote with automatic discounts of 5%, 10% or 15% for multiple bookings." name="description" />
+  <meta content="Quotation &amp; Discount Calculator | Next Level Gaming" property="og:title" />
+  <meta content="Build your gaming quote with automatic discounts of 5%, 10% or 15% for multiple bookings." property="og:description" />
+  <meta content="website" property="og:type" />
+  <meta content="summary_large_image" name="twitter:card" />
+
+  <!-- STEP 4: Favicon -->
+  <link href="assets/favicon.svg" rel="icon" />
+
+  <!-- STEP 5: Load Fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- STEP 6: Link External Stylesheets -->
+  <link href="styles.css" rel="stylesheet" />
+
+  <!-- STEP 7: Link JavaScript Files (Deferred) -->
+  <script defer src="arena.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- STEP 8: Display Top Information Bar -->
+  <div class="topline">
+    <div class="site-width">
+      <span>
+        <svg aria-hidden="true" class="lucide lucide-map-pin" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        JOHANNESBURG, SOUTH AFRICA
+      </span>
+      <span>
+        YOUR NEXT LEVEL STARTS HERE
+        <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- STEP 9: Create Header with Navigation -->
+  <header class="site-header">
+    <div class="site-width header-inner">
+      <!-- STEP 9A: Brand Logo & Name -->
+      <a class="brand" href="index.html">
+        <span class="brand-symbol">
+          <svg aria-hidden="true" class="lucide lucide-gamepad2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <line x1="6" x2="10" y1="11" y2="11"></line>
+            <line x1="8" x2="8" y1="9" y2="13"></line>
+            <line x1="15" x2="15.01" y1="12" y2="12"></line>
+            <line x1="18" x2="18.01" y1="10" y2="10"></line>
+            <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"></path>
+          </svg>
+        </span>
+        <span>
+          NEXT LEVEL
+          <span class="brand-sub">GAMING &amp; ESPORTS ARENA</span>
+        </span>
+      </a>
+
+      <!-- STEP 9B: Navigation Menu -->
+      <nav aria-label="Main navigation" class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="overview.html">Experiences</a>
+        <a aria-current="page" class="active" href="calculate.html">Calculate fees</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- STEP 9C: Call-to-Action Button -->
+      <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-sm font-bold cursor-pointer transition-colors header-book export-button" href="contact.html">
+        Book now
+        <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </a>
+
+      <!-- STEP 9D: Mobile Menu Toggle -->
+      <button aria-label="Open menu" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-sm font-bold cursor-pointer transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9 menu-toggle export-button">
+        <svg aria-hidden="true" class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 5h16"></path>
+          <path d="M4 12h16"></path>
+          <path d="M4 19h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- STEP 10: Main Content Section -->
+  <main>
+    <!-- STEP 10A: Page Introduction Section -->
+    <section class="page-intro">
+      <div class="site-width">
+        <span class="eyebrow">04 / MAKE IT YOURS</span>
+        <h1>More game for your rand.</h1>
+        <p>Choose your packages and experiences. We'll take care of the discount.</p>
+      </div>
+    </section>
+
+    <!-- STEP 10B: Calculator Layout Section -->
+    <section class="site-width section calculator-layout">
+      <div>
+        <!-- STEP 10B-i: Gaming Packages Group -->
+        <div class="calculator-group">
+          <div class="section-heading">
+            <h2>Gaming packages</h2>
+            <span class="eyebrow">R1,500 EACH</span>
+          </div>
+
+          <!-- Gaming Package Checkboxes -->
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>Ultimate Gamer Pass</span>
+            <strong>R1,500</strong>
+          </label>
+
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>VIP Gaming Experience</span>
+            <strong>R1,500</strong>
+          </label>
+
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>Esports Training Package</span>
+            <strong>R1,500</strong>
+          </label>
+
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>Birthday Party Package</span>
+            <strong>R1,500</strong>
+          </label>
+        </div>
+
+        <!-- STEP 10B-ii: Individual Experiences Group -->
+        <div class="calculator-group">
+          <div class="section-heading">
+            <h2>Individual experiences</h2>
+            <span class="eyebrow">R750 EACH</span>
+          </div>
+
+          <!-- Individual Experience Checkboxes -->
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>Virtual Reality Experience</span>
+            <strong>R750</strong>
+          </label>
+
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>Racing Simulator Challenge</span>
+            <strong>R750</strong>
+          </label>
+
+          <label class="selection-row">
+            <input type="checkbox" />
+            <span>Escape Room Challenge</span>
+            <strong>R750</strong>
+          </label>
+        </div>
+      </div>
+
+      <!-- STEP 10C: Quote Sidebar -->
+      <aside class="quote">
+        <!-- STEP 10C-i: Quote Header -->
+        <div class="quote-header">
+          <span class="eyebrow">YOUR NEXT SESSION</span>
+          <h2>Your quote.</h2>
+          <p>0 bookings selected</p>
+        </div>
+
+        <!-- STEP 10C-ii: Quote Body & Calculations -->
+        <div class="quote-body">
+          <p class="empty-quote">Your next level is waiting.</p>
+
+          <!-- Subtotal Line -->
+          <div class="quote-line subtotal">
+            <span>Subtotal</span>
+            <strong>R0</strong>
+          </div>
+
+          <!-- Discount Tier Information -->
+          <span class="eyebrow">YOUR DISCOUNT TIER</span>
+          <div class="quote-tiers">
+            <div class="current">
+              <strong>0%</strong>
+              <span>1 booking</span>
+            </div>
+            <div>
+              <strong>5%</strong>
+              <span>2 bookings</span>
+            </div>
+            <div>
+              <strong>10%</strong>
+              <span>3 bookings</span>
+            </div>
+            <div>
+              <strong>15%</strong>
+              <span>4+ bookings</span>
+            </div>
+          </div>
+
+          <!-- Discount Line -->
+          <div class="quote-line">
+            <span>Discount (0%)</span>
+            <strong>− R0</strong>
+          </div>
+
+          <!-- Total Line -->
+          <div class="quote-line quote-total">
+            <span>Total</span>
+            <strong data-testid="quote-total">R0</strong>
+          </div>
+
+          <!-- Proceed to Booking Button -->
+          <a aria-disabled="true" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-sm font-bold cursor-pointer transition-colors disabled-link export-button" role="link">
+            Proceed to booking
+            <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </a>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- STEP 11: Footer Section -->
+  <footer>
+    <!-- STEP 11A: Footer Grid Content -->
+    <div class="site-width footer-grid">
+      <!-- Column 1: Brand & Description -->
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-symbol">
+            <svg aria-hidden="true" class="lucide lucide-gamepad2" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <line x1="6" x2="10" y1="11" y2="11"></line>
+              <line x1="8" x2="8" y1="9" y2="13"></line>
+              <line x1="15" x2="15.01" y1="12" y2="12"></line>
+              <line x1="18" x2="18.01" y1="10" y2="10"></line>
+              <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"></path>
+            </svg>
+          </span>
+          <span>
+            NEXT LEVEL
+            <span class="brand-sub">GAMING &amp; ESPORTS ARENA</span>
+          </span>
+        </a>
+        <p>Great gaming shouldn't require owning great hardware. Walk in. Sit down. Play at your next level.</p>
+      </div>
+
+      <!-- Column 2: Explore Links -->
+      <div>
+        <h4>EXPLORE</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="overview.html">Experiences</a>
+        <a class="active" href="calculate.html">Calculate fees</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!-- Column 3: Location Info -->
+      <div>
+        <h4>FIND THE ARENA</h4>
+        <p>
+          123 Gaming Boulevard<br />
+          Sandton, Johannesburg<br />
+          2196, South Africa
+        </p>
+        <a href="contact.html">
+          Plan your visit
+          <svg aria-hidden="true" class="lucide lucide-arrow-up-right" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 7h10v10"></path>
+            <path d="M7 17 17 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Column 4: Contact Info -->
+      <div>
+        <h4>LET'S TALK</h4>
+        <a href="mailto:info@nextlevelgaming.co.za">info@nextlevelgaming.co.za</a>
+        <a href="tel:+27110000000">+27 11 000 0000</a>
+        <p>
+          Mon–Thu: 10:00–22:00<br />
+          Fri: 10:00–24:00<br />
+          Sat: 09:00–24:00 · Sun: 09:00–22:00
+        </p>
+      </div>
+    </div>
+
+    <!-- STEP 11B: Footer Bottom Section -->
+    <div class="site-width footer-bottom">
+      <span>© 2026 Next Level Gaming. All rights reserved.</span>
+      <span>FOUNDED BY ELLEN PHATEDI · MADE FOR GAMERS</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>="/src/components/site.tsx:15:5"><section class="page-intro" data-tsd-source="/src/components/site.tsx:17:126"><div class="site-width" data-tsd-source="/src/components/site.tsx:17:158"><span class="eyebrow" data-tsd-source="/src/components/site.tsx:17:186">04 / MAKE IT YOURS</span><h1 data-tsd-source="/src/components/site.tsx:17:228">More game for your rand.</h1><p data-tsd-source="/src/components/site.tsx:17:244">Choose your packages and experiences. We’ll take care of the discount.</p></div></section><section class="site-width section calculator-layout" data-tsd-source="/src/routes/calculate.tsx:8:474"><div data-tsd-source="/src/routes/calculate.tsx:8:532"><div class="calculator-group" data-tsd-source="/src/routes/calculate.tsx:8:588"><div class="section-heading" data-tsd-source="/src/routes/calculate.tsx:8:637"><h2 data-tsd-source="/src/routes/calculate.tsx:8:670">Gaming packages</h2><span class="eyebrow" data-tsd-source="/src/routes/calculate.tsx:8:744">R1,500<!-- --> EACH</span></div><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">Ultimate Gamer Pass</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R1,500</strong></label><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">VIP Gaming Experience</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R1,500</strong></label><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">Esports Training Package</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R1,500</strong></label><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">Birthday Party Package</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R1,500</strong></label></div><div class="calculator-group" data-tsd-source="/src/routes/calculate.tsx:8:588"><div class="section-heading" data-tsd-source="/src/routes/calculate.tsx:8:637"><h2 data-tsd-source="/src/routes/calculate.tsx:8:670">Individual experiences</h2><span class="eyebrow" data-tsd-source="/src/routes/calculate.tsx:8:744">R750<!-- --> EACH</span></div><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">Virtual Reality Experience</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R750</strong></label><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">Racing Simulator Challenge</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R750</strong></label><label class="selection-row" data-tsd-source="/src/routes/calculate.tsx:8:877"><input data-tsd-source="/src/routes/calculate.tsx:8:967" type="checkbox"/><span data-tsd-source="/src/routes/calculate.tsx:8:1099">Escape Room Challenge</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1120">R750</strong></label></div></div><aside class="quote" data-tsd-source="/src/routes/calculate.tsx:8:1177"><div class="quote-header" data-tsd-source="/src/routes/calculate.tsx:8:1202"><span class="eyebrow" data-tsd-source="/src/routes/calculate.tsx:8:1232">YOUR NEXT SESSION</span><h2 data-tsd-source="/src/routes/calculate.tsx:8:1282">Your quote.</h2><p data-tsd-source="/src/routes/calculate.tsx:8:1302">0<!-- --> <!-- -->bookings<!-- --> selected</p></div><div class="quote-body" data-tsd-source="/src/routes/calculate.tsx:8:1380"><p class="empty-quote" data-tsd-source="/src/routes/calculate.tsx:8:1538">Your next level is waiting.</p><div class="quote-line subtotal" data-tsd-source="/src/routes/calculate.tsx:8:1597"><span data-tsd-source="/src/routes/calculate.tsx:8:1634">Subtotal</span><strong data-tsd-source="/src/routes/calculate.tsx:8:1655">R0</strong></div><span class="eyebrow" data-tsd-source="/src/routes/calculate.tsx:8:1695">YOUR DISCOUNT TIER</span><div class="quote-tiers" data-tsd-source="/src/routes/calculate.tsx:8:1746"><div class="current" data-tsd-source="/src/routes/calculate.tsx:8:1799"><strong data-tsd-source="/src/routes/calculate.tsx:8:1850">0<!-- -->%</strong><span data-tsd-source="/src/routes/calculate.tsx:8:1871">1<!-- --> <!-- -->booking</span></div><div class="" data-tsd-source="/src/routes/calculate.tsx:8:1799"><strong data-tsd-source="/src/routes/calculate.tsx:8:1850">5<!-- -->%</strong><span data-tsd-source="/src/routes/calculate.tsx:8:1871">2<!-- --> <!-- -->bookings</span></div><div class="" data-tsd-source="/src/routes/calculate.tsx:8:1799"><strong data-tsd-source="/src/routes/calculate.tsx:8:1850">10<!-- -->%</strong><span data-tsd-source="/src/routes/calculate.tsx:8:1871">3<!-- --> <!-- -->bookings</span></div><div class="" data-tsd-source="/src/routes/calculate.tsx:8:1799"><strong data-tsd-source="/src/routes/calculate.tsx:8:1850">15<!-- -->%</strong><span data-tsd-source="/src/routes/calculate.tsx:8:1871">4+<!-- --> <!-- -->bookings</span></div></div><div class="quote-line" data-tsd-source="/src/routes/calculate.tsx:8:1943"><span data-tsd-source="/src/routes/calculate.tsx:8:1971">Discount (<!-- -->0<!-- -->%)</span><strong data-tsd-source="/src/routes/calculate.tsx:8:2006">−<!-- -->R0</strong></div><div class="quote-line quote-total" data-tsd-source="/src/routes/calculate.tsx:8:2052"><span data-tsd-source="/src/routes/calculate.tsx:8:2092">Total</span><strong data-testid="quote-total" data-tsd-source="/src/routes/calculate.tsx:8:2110">R0</strong></div><a aria-disabled="true" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-sm font-bold cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-11 px-5 py-2 disabled-link export-button" data-tsd-source="/src/routes/calculate.tsx:8:2273" role="link">Proceed to booking <svg aria-hidden="true" class="lucide lucide-arrow-up-right" data-tsd-source="/src/routes/calculate.tsx:8:2391" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div></aside></section></main><footer data-tsd-source="/src/components/site.tsx:15:28"><div class="site-width footer-grid" data-tsd-source="/src/components/site.tsx:15:36"><div data-tsd-source="/src/components/site.tsx:15:76"><a class="brand" data-tsd-source="/src/components/site.tsx:15:81" href="index.html"><span class="brand-symbol" data-tsd-source="/src/components/site.tsx:15:112"><svg aria-hidden="true" class="lucide lucide-gamepad2 lucide-gamepad-2" data-tsd-source="/src/components/site.tsx:15:143" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="6" x2="10" y1="11" y2="11"></line><line x1="8" x2="8" y1="9" y2="13"></line><line x1="15" x2="15.01" y1="12" y2="12"></line><line x1="18" x2="18.01" y1="10" y2="10"></line><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"></path></svg></span><span data-tsd-source="/src/components/site.tsx:15:162">NEXT LEVEL<span class="brand-sub" data-tsd-source="/src/components/site.tsx:15:178">GAMING &amp; ESPORTS ARENA</span></span></a><p data-tsd-source="/src/components/site.tsx:15:249">Great gaming shouldn’t require owning great hardware. Walk in. Sit down. Play at your next level.</p></div><div data-tsd-source="/src/components/site.tsx:15:359"><h4 data-tsd-source="/src/components/site.tsx:15:364">EXPLORE</h4><a data-tsd-source="/src/components/site.tsx:15:401" href="index.html">Home</a><a data-tsd-source="/src/components/site.tsx:15:401" href="about.html">About us</a><a data-tsd-source="/src/components/site.tsx:15:401" href="overview.html">Experiences</a><a aria-current="page" class="active" data-status="active" data-tsd-source="/src/components/site.tsx:15:401" href="calculate.html">Calculate fees</a><a data-tsd-source="/src/components/site.tsx:15:401" href="contact.html">Contact</a></div><div data-tsd-source="/src/components/site.tsx:15:464"><h4 data-tsd-source="/src/components/site.tsx:15:469">FIND THE ARENA</h4><p data-tsd-source="/src/components/site.tsx:15:492">123 Gaming Boulevard<br data-tsd-source="/src/components/site.tsx:15:515"/>Sandton, Johannesburg<br data-tsd-source="/src/components/site.tsx:15:542"/>2196, South Africa</p><a data-tsd-source="/src/components/site.tsx:15:570" href="contact.html">Plan your visit <svg aria-hidden="true" class="lucide lucide-arrow-up-right" data-tsd-source="/src/components/site.tsx:15:618" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a></div><div data-tsd-source="/src/components/site.tsx:15:657"><h4 data-tsd-source="/src/components/site.tsx:15:662">LET’S TALK</h4><a data-tsd-source="/src/components/site.tsx:15:681" href="mailto:info@nextlevelgaming.co.za">info@nextlevelgaming.co.za</a><a data-tsd-source="/src/components/site.tsx:15:755" href="tel:+27110000000">+27 11 000 0000</a><p data-tsd-source="/src/components/site.tsx:15:801">Mon–Thu: 10:00–22:00<br data-tsd-source="/src/components/site.tsx:15:824"/>Fri: 10:00–24:00<br data-tsd-source="/src/components/site.tsx:15:846"/>Sat: 09:00–24:00 · Sun: 09:00–22:00</p></div></div><div class="site-width footer-bottom" data-tsd-source="/src/components/site.tsx:15:903"><span data-tsd-source="/src/components/site.tsx:15:945">© <!-- -->2026<!-- --> Next Level Gaming. All rights reserved.</span><span data-tsd-source="/src/components/site.tsx:15:1026">FOUNDED BY ELLEN PHATEDI · MADE FOR GAMERS</span></div></footer></body></html>
